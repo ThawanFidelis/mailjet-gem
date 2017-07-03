@@ -138,7 +138,7 @@ module Mailjet
          url_elements = self.resource_path.split("/")
          url_elements.delete_at(url_elements.length-1) if url_elements.last.to_i > 0 #if there is a trailing number for the job id from last call, delete it
 
-         if !(url_elements[1] == "contacts" && self.action == "managemanycontacts")
+         if !(url_elements[1] == "contact" && self.action == "managemanycontacts")
            url_elements[2] = id.to_s
          end
 
